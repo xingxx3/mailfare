@@ -68,14 +68,14 @@
 	"d1_databases": [
 		{
 			"binding": "DB",
-			"database_name": "H3llMail",
-			"migrations_dir": "drizzle/migrations","database_id": "cec5e1b9-babe-4f5c-b852-629d7f118dee",
+			"database_name": "mailflare",
+			"migrations_dir": "drizzle/migrations",
 		},
 	],
 	"r2_buckets": [
 		{
 			"binding": "BUCKET",
-			"bucket_name": "mailflare-raw","preview_bucket_name": "mailflare-raw",
+			"bucket_name": "mailflare-raw",
 		},
 	],
 	"queues": {

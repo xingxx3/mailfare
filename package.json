@@ -4,10 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "opennextjs-cloudflare build",
+    "build:next": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "opennextjs-cloudflare build && npm run deploy:worker",
+    "deploy": "opennextjs-cloudflare build && OPEN_NEXT_DEPLOY=true wrangler deploy",
     "deploy:worker": "OPEN_NEXT_DEPLOY=true wrangler deploy",
     "deploy:with-migrations": "npm run db:migrate:remote && npm run deploy",
     "upload": "opennextjs-cloudflare build && OPEN_NEXT_DEPLOY=true wrangler versions upload",

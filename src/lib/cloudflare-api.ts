@@ -184,6 +184,40 @@ export async function createEmailRoutingRuleToWorker(
 	);
 }
 
+export async function listDestinationAddresses(env: CloudflareEnv) {
+	const accountId = env.CF_AID?.trim();
+	if (!accountId) throw new Error("CF_AID is not configured");
+
+	return cfRequest<
+		{ id: string; tag: string; email: string; status: string; verified: string | null; created: string }[]
+	>(env, `/accounts/${accountId}/email/routing/addresses`);
+}
+
+export async function createDestinationAddress(env: CloudflareEnv, email: string) {
+	const accountId = env.CF_AID?.trim();
+	if (!accountId) throw new Error("CF_AID is not configured");
+
+	return cfRequest<{ id: string; tag: string; email: string; status: string; verified: string | null }>(
+		env,
+		`/accounts/${accountId}/email/routing/addresses`,
+		{
+			method: "POST",
+			body: JSON.stringify({ email }),
+		},
+	);
+}
+
+export async function deleteDestinationAddress(env: CloudflareEnv, addressId: string) {
+	const accountId = env.CF_AID?.trim();
+	if (!accountId) throw new Error("CF_AID is not configured");
+
+	return cfRequest<unknown>(
+		env,
+		`/accounts/${accountId}/email/routing/addresses/${addressId}`,
+		{ method: "DELETE" },
+	);
+}
+
 export async function ensureEmailRoutingRuleToWorker(
 	env: CloudflareEnv,
 	zoneId: string,

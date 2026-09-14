@@ -9,6 +9,7 @@ import {
   Palette,
   BadgeDollarSign,
   Users,
+  Send,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { NavItem } from "./components-nav";
@@ -27,6 +28,7 @@ const sections = [
     links: [
       { href: "/mailboxes", label: "Mailboxes", icon: Mail },
       { href: "/domains", label: "Domains", icon: Globe2 },
+      { href: "/destinations", label: "Destinations", icon: Send },
     ],
   },
   {
@@ -64,7 +66,7 @@ export function AdminNav({ className }: { className?: string }) {
           if (links.length === 0) return null;
 
           return (
-            <section key={section.label}>
+            <section key={section.label ?? section.links[0].href}>
               {!minimal && section.label && (
                 <p className="mb-1 px-3 text-[11px] font-semibold uppercase tracking-wider text-neutral-400">
                   {section.label}

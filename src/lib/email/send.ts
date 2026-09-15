@@ -7,7 +7,7 @@ import { dispatchWebhooks } from "@/lib/email/webhooks";
 import { upsertContactFromAddress } from "@/lib/contacts/service";
 import { getAuthorizedSenderAddress } from "@/lib/email/sender";
 import { createAuditLog } from "@/lib/mailboxes/audit";
-import { storeMessageAttachments, validateAttachments } from "@/lib/email/attachments";
+import { encodeBase64Content, storeMessageAttachments, validateAttachments } from "@/lib/email/attachments";
 import type { AttachmentContent } from "@/lib/email/attachment-types";
 
 export type SendEmailInput = {
@@ -70,6 +70,10 @@ export async function sendEmail(env: CloudflareEnv, input: SendEmailInput): Prom
 	});
 
 	try {
+		// The send_email binding is declared with `remote: true`, and remote
+		// bindings cannot serialize ArrayBuffer content ("Cannot serialize
+		// value: [object ArrayBuffer]"). The builder accepts base64 strings,
+		// so always hand it base64-encoded content.
 		const response = await env.EMAIL.send({
 			from: sender.fromAddr,
 			to: input.to,
@@ -82,14 +86,14 @@ export async function sendEmail(env: CloudflareEnv, input: SendEmailInput): Prom
 					? {
 							filename: attachment.filename,
 							type: attachment.type,
-							content: attachment.content,
+							content: encodeBase64Content(attachment.content),
 							disposition: "inline" as const,
 							contentId: attachment.contentId,
 						}
 					: {
 							filename: attachment.filename,
 							type: attachment.type,
-							content: attachment.content,
+							content: encodeBase64Content(attachment.content),
 							disposition: "attachment" as const,
 						},
 			),

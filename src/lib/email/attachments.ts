@@ -23,6 +23,21 @@ export function decodeBase64Content(content: string): ArrayBuffer {
 	return bytes.buffer;
 }
 
+// ArrayBuffer -> base64, chunked so `String.fromCharCode` never blows the
+// argument limit on multi-MB attachments. Used because the send_email binding
+// (remote: true) cannot serialize ArrayBuffer content across the remote
+// binding boundary ("Cannot serialize value: [object ArrayBuffer]"), while
+// base64 strings are always accepted.
+export function encodeBase64Content(content: ArrayBuffer): string {
+	const bytes = new Uint8Array(content);
+	const chunkSize = 0x8000;
+	let binary = "";
+	for (let index = 0; index < bytes.length; index += chunkSize) {
+		binary += String.fromCharCode(...bytes.subarray(index, index + chunkSize));
+	}
+	return btoa(binary);
+}
+
 export function normalizeAttachmentContent(
 	content: ArrayBuffer | Uint8Array | string,
 	encoding?: "base64" | "utf8",

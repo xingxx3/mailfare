@@ -136,6 +136,27 @@ export const contacts = sqliteTable(
 	],
 );
 
+export const subscribers = sqliteTable(
+	"subscribers",
+	{
+		id: text("id").primaryKey(),
+		email: text("email").notNull().unique(),
+		name: text("name"),
+		destinationId: text("destination_id"),
+		status: text("status").notNull().default("pending"),
+		verifiedAt: integer("verified_at", { mode: "timestamp" }),
+		unsubscribed: integer("unsubscribed", { mode: "boolean" }).notNull().default(false),
+		source: text("source").notNull().default("public"),
+		createdAt: integer("created_at", { mode: "timestamp" })
+			.notNull()
+			.$defaultFn(() => new Date()),
+	},
+	(t) => [
+		index("subscribers_status_idx").on(t.status),
+		index("subscribers_created_idx").on(t.createdAt),
+	],
+);
+
 export const folders = sqliteTable(
 	"folders",
 	{
@@ -435,6 +456,7 @@ export const schema = {
 	autoReplyDeliveries,
 	mailboxAccess,
 	contacts,
+	subscribers,
 	folders,
 	apiKeys,
 	messages,

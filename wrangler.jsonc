@@ -18,7 +18,7 @@
 	"services": [
 		{
 			"binding": "WORKER_SELF_REFERENCE",
-			"service": "mailflare",
+			"service": "mailfare",
 		},
 	],
 	"durable_objects": {
@@ -103,4 +103,9 @@
 			},
 		],
 	},
+	"vars": {
+		// Service sender for /api/transactional (akama-2 verification mail).
+		// MAILFARE_TX_KEY is a secret: `wrangler secret put MAILFARE_TX_KEY` (never commit it here).
+		"MAILFARE_TX_FROM": "Akama <verify@mail.akamasocial.online>"
+	}
 }

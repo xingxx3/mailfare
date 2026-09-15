@@ -1,4 +1,4 @@
-import type { CfDnsRecord, CfEmailRoutingRule, CfResponse } from "@/lib/cloudflare-api.types";
+import type { CfDestinationAddress, CfDnsRecord, CfEmailRoutingRule, CfResponse } from "@/lib/cloudflare-api.types";
 import {
 	formatCloudflareError,
 	getCloudflareAuth,
@@ -7,7 +7,7 @@ import {
 	getEmailWorkerName,
 } from "@/lib/cloudflare-api-utils";
 import { getZoneLookupCandidates } from "@/lib/domains/utils";
-export type { CfDnsRecord } from "@/lib/cloudflare-api.types";
+export type { CfDnsRecord, CfDestinationAddress } from "@/lib/cloudflare-api.types";
 
 export async function cfRequest<T>(
 	env: CloudflareEnv,
@@ -188,16 +188,24 @@ export async function listDestinationAddresses(env: CloudflareEnv) {
 	const accountId = env.CF_AID?.trim();
 	if (!accountId) throw new Error("CF_AID is not configured");
 
-	return cfRequest<
-		{ id: string; tag: string; email: string; status: string; verified: string | null; created: string }[]
-	>(env, `/accounts/${accountId}/email/routing/addresses`);
+	return cfRequest<CfDestinationAddress[]>(env, `/accounts/${accountId}/email/routing/addresses`);
+}
+
+export async function getDestinationAddress(env: CloudflareEnv, addressId: string) {
+	const accountId = env.CF_AID?.trim();
+	if (!accountId) throw new Error("CF_AID is not configured");
+
+	return cfRequest<CfDestinationAddress>(
+		env,
+		`/accounts/${accountId}/email/routing/addresses/${encodeURIComponent(addressId)}`,
+	);
 }
 
 export async function createDestinationAddress(env: CloudflareEnv, email: string) {
 	const accountId = env.CF_AID?.trim();
 	if (!accountId) throw new Error("CF_AID is not configured");
 
-	return cfRequest<{ id: string; tag: string; email: string; status: string; verified: string | null }>(
+	return cfRequest<CfDestinationAddress>(
 		env,
 		`/accounts/${accountId}/email/routing/addresses`,
 		{

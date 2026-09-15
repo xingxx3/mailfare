@@ -19,3 +19,9 @@ D1_BACKUP_TOKEN=cloudflare_api_token_allowed_to_export_d1
 # Legacy Global API Key alternative. Use this only instead of CF_TOKEN.
 # CF_EMAIL=you@example.com
 # CF_API_KEY=your_global_api_key
+
+# Service-to-service transactional mail (akama-2 verification).
+# MAILFARE_TX_KEY must match akama-2's MAILFARE_TX_KEY; MAILFARE_TX_FROM
+# must be on a domain verified for sending in this Cloudflare account.
+MAILFARE_TX_KEY=dev-only-test-key
+MAILFARE_TX_FROM="Akama <verify@mail.akamasocial.online>"

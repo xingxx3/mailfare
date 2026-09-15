@@ -1,0 +1,23 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "mailfare",
+	"main": "./email-forwarder.ts",
+	"compatibility_date": "2026-05-20",
+	"compatibility_flags": ["nodejs_compat"],
+	"vars": {
+		"FORWARD_URL": "https://mail.akamasocial.online"
+	},
+	"migrations": [
+		{
+			"tag": "v1",
+			"new_sqlite_classes": ["RealtimeHub"]
+		},
+		{
+			"tag": "v2-drop-realtime",
+			"deleted_classes": ["RealtimeHub"]
+		}
+	],
+	"observability": {
+		"enabled": true
+	}
+}

@@ -62,7 +62,7 @@
   },
   "license": "SEE LICENSE IN LICENSE",
   "dependencies": {
-    "@opennextjs/cloudflare": "^1.19.9",
+    "@opennextjs/cloudflare": "^1.20.6",
     "@radix-ui/react-dialog": "^1.1.15",
     "@radix-ui/react-dropdown-menu": "^2.1.16",
     "@radix-ui/react-label": "^2.1.8",
@@ -80,7 +80,7 @@
     "lucide-react": "^1.16.0",
     "mimetext": "^3.0.28",
     "nanoid": "^5.1.11",
-    "next": "16.2.6",
+    "next": "^16.3.5",
     "postal-mime": "^2.7.4",
     "react": "^19.1.7",
     "react-dom": "^19.1.7",
@@ -88,7 +88,7 @@
     "zod": "^4.4.3"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20260520.1",
+    "@cloudflare/workers-types": "^5.20260914.1",
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
     "@types/bcryptjs": "^2.4.6",
@@ -97,9 +97,9 @@
     "@types/react-dom": "^19.1.7",
     "drizzle-kit": "^0.31.10",
     "eslint": "^9",
-    "eslint-config-next": "16.2.6",
+    "eslint-config-next": "^16.3.5",
     "tailwindcss": "^4",
     "typescript": "^5.7.4",
-    "wrangler": "^4.98.0"
+    "wrangler": "^4.131.2"
   }
 }

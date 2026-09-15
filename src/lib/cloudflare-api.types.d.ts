@@ -31,6 +31,15 @@ export type CfAuth =
 			key: string;
 	  };
 
+export type CfDestinationAddress = {
+	id: string;
+	tag: string;
+	email: string;
+	status: string;
+	verified: string | null;
+	created: string;
+};
+
 export type CfEmailRoutingRule = {
 	id?: string;
 	actions?: {

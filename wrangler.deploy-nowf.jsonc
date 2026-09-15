@@ -1,32 +1,40 @@
 {
-	"$schema": "node_modules/wrangler/config-schema.json",
-	"name": "mailflare",
+	"name": "mailfare",
 	"main": "./worker.ts",
 	"compatibility_date": "2026-05-20",
+	"keep_vars": true,
 	"compatibility_flags": [
 		"nodejs_compat",
 		"global_fetch_strictly_public"
 	],
 	"assets": {
 		"binding": "ASSETS",
-		"directory": ".open-next/assets",
+		"directory": ".open-next/assets"
 	},
 	"images": {
-		"binding": "IMAGES",
+		"binding": "IMAGES"
 	},
 	"services": [
 		{
 			"binding": "WORKER_SELF_REFERENCE",
-			"service": "mailflare",
-		},
+			"service": "mailfare"
+		}
 	],
-	"workflows": [
+	"durable_objects": {
+		"bindings": [
+			{
+				"name": "REALTIME",
+				"class_name": "RealtimeHub"
+			}
+		]
+	},
+	"migrations": [
 		{
-			"name": "mailflare-database-backup",
-			"binding": "DATABASE_BACKUP_WORKFLOW",
-			"class_name": "DatabaseBackupWorkflow",
-			"schedules": ["0 2 * * *"],
-		},
+			"tag": "v1",
+			"new_sqlite_classes": [
+				"RealtimeHub"
+			]
+		}
 	],
 	"ratelimits": [
 		{
@@ -34,60 +42,56 @@
 			"namespace_id": "1001",
 			"simple": {
 				"limit": 20,
-				"period": 60,
-			},
-		},
+				"period": 60
+			}
+		}
 	],
 	"observability": {
-		"enabled": true,
+		"enabled": true
 	},
 	"upload_source_maps": true,
 	"send_email": [
 		{
 			"name": "EMAIL",
-			"remote": true,
-		},
+			"remote": true
+		}
 	],
 	"d1_databases": [
 		{
 			"binding": "DB",
 			"database_name": "mailflare",
-			"migrations_dir": "drizzle/migrations",
-		},
+			"database_id": "cf7c2ddc-c274-42db-999d-dbc526f2e0d7",
+			"migrations_dir": "drizzle/migrations"
+		}
 	],
 	"r2_buckets": [
 		{
 			"binding": "BUCKET",
-			"bucket_name": "mailflare-raw",
-		},
+			"bucket_name": "mailflare-raw"
+		}
 	],
 	"queues": {
 		"producers": [
 			{
 				"binding": "INBOUND_QUEUE",
-				"queue": "mailflare-inbound",
+				"queue": "mailflare-inbound"
 			},
 			{
 				"binding": "OUTBOUND_QUEUE",
-				"queue": "mailflare-outbound",
-			},
+				"queue": "mailflare-outbound"
+			}
 		],
 		"consumers": [
 			{
 				"queue": "mailflare-inbound",
 				"max_batch_size": 5,
-				"max_retries": 3,
+				"max_retries": 3
 			},
 			{
 				"queue": "mailflare-outbound",
 				"max_batch_size": 5,
-				"max_retries": 3,
-			},
-		],
-	},
-	"vars": {
-		// Service sender for /api/transactional (akama-2 verification mail).
-		// MAILFARE_TX_KEY is a secret: `wrangler secret put MAILFARE_TX_KEY` (never commit it here).
-		"MAILFARE_TX_FROM": "Akama <verify@mail.akamasocial.online>"
+				"max_retries": 3
+			}
+		]
 	}
 }

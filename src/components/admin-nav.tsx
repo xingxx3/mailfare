@@ -10,6 +10,7 @@ import {
   BadgeDollarSign,
   Users,
   Send,
+  Megaphone,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { NavItem } from "./components-nav";
@@ -29,6 +30,7 @@ const sections = [
       { href: "/mailboxes", label: "Mailboxes", icon: Mail },
       { href: "/domains", label: "Domains", icon: Globe2 },
       { href: "/destinations", label: "Destinations", icon: Send },
+      { href: "/subscribers", label: "Subscribers", icon: Megaphone },
     ],
   },
   {

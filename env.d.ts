@@ -20,6 +20,7 @@ interface CloudflareEnv {
 	D1_BACKUP_TOKEN?: string;
 	TURNSTILE_SECRET_KEY?: string;
 	CF_EMAIL_WORKER_NAME?: string;
+	INBOUND_FORWARD_SECRET?: string;
 	GITHUB_UPDATE_TOKEN?: string;
 	GITHUB_UPDATE_REF?: string;
 	GITHUB_UPDATE_REPO?: string

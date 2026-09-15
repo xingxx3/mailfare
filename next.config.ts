@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
 	turbopack: {
 		root: import.meta.dirname,
 	},
-  allowedDevOrigins: ['mail.dev'],
+  allowedDevOrigins: ['mail.dev', 'mail.akamasocial.online'],
 	typescript: {
     // !! WARN !!
     // Dangerously allow production builds to successfully complete

@@ -3,6 +3,20 @@
 	"name": "mailfare",
 	"main": "./worker.ts",
 	"compatibility_date": "2026-05-20",
+	"routes": [
+		// Custom domain for the app. The old tunnel CNAME was removed so the
+		// Worker serves mail.akamasocial.online directly (inbound email also
+		// no longer depends on the tunnel).
+		{
+			"pattern": "mail.akamasocial.online",
+			"custom_domain": true,
+		},
+	],
+	// Keep the workers.dev URL enabled alongside the custom domain
+	// (adding a custom domain disables workers.dev by default).
+	"workers_dev": true,
+	// Silence the Preview URLs warning; this app doesn't use them.
+	"preview_urls": false,
 	"keep_vars": true,
 	"compatibility_flags": [
 		"nodejs_compat",

@@ -1,0 +1,602 @@
+{
+    "wallTime": 1,
+    "cpuTime": 0,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "exception",
+    "scriptVersion": {
+        "id": "06b838f9-cf36-4338-bd93-87db9097e406"
+    },
+    "scriptName": "mailfare",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [
+        {
+            "name": "Error",
+            "message": "Handler does not export a fetch() function.",
+            "timestamp": 1789610815543
+        }
+    ],
+    "logs": [],
+    "eventTimestamp": 1789610815543,
+    "event": {
+        "request": {
+            "url": "https://mailfare.matovufaruq.workers.dev/",
+            "method": "GET",
+            "headers": {
+                "accept": "*/*",
+                "accept-encoding": "gzip, br",
+                "cf-connecting-ip": "102.203.209.115",
+                "cf-ipcountry": "UG",
+                "cf-ray": "a3c48ded195765eb",
+                "cf-visitor": "{\"scheme\":\"https\"}",
+                "connection": "Keep-Alive",
+                "host": "mailfare.matovufaruq.workers.dev",
+                "user-agent": "curl/8.13.0",
+                "x-forwarded-proto": "https",
+                "x-real-ip": "102.203.209.115"
+            },
+            "cf": {
+                "httpProtocol": "HTTP/1.1",
+                "requestPriority": "",
+                "edgeRequestKeepAliveStatus": 1,
+                "requestHeaderNames": {},
+                "clientTcpRtt": 25,
+                "clientQuicRtt": 0,
+                "colo": "MBA",
+                "asn": 329415,
+                "asOrganization": "Savanna Fibre Limited",
+                "country": "UG",
+                "isEUCountry": false,
+                "city": "Kampala",
+                "continent": "AF",
+                "region": "Central Region",
+                "regionCode": "C",
+                "timezone": "Africa/Kampala",
+                "longitude": "32.58219",
+                "latitude": "0.31628",
+                "tlsVersion": "TLSv1.2",
+                "tlsCipher": "ECDHE-ECDSA-AES128-GCM-SHA256",
+                "tlsClientRandom": "aqtLPzYhrSCHpkeNwlDRuI0aGVcWwBf4c5/po/ppNq0=",
+                "tlsClientCiphersSha1": "OeQPcEYDgqo1GMKGYd0qWuAiHW8=",
+                "tlsClientExtensionsSha1": "CRkQ5euuu2651vt+v0zfIPfqJ8A=",
+                "tlsClientExtensionsSha1Le": "vN/sLbiiNfOvkFXFDvjB0+A6Jfg=",
+                "tlsExportedAuthenticator": {
+                    "clientHandshake": "54892dd33091dea4420b34e30984f7199fd8df2689e86cdaec06cc8b035c3bd3",
+                    "serverHandshake": "710df921ed84c6e9e3caed7ded2ce4d212eab85586757efe841848162195c938",
+                    "clientFinished": "f1365ad8e7d73eec8aad5b86490143850b1cb717174b1011fc41717c05f4a822",
+                    "serverFinished": "78299f608e7735ac28eca9c33900ab1f07dc1406dd97c693bb609981f296e805"
+                },
+                "tlsClientHelloLength": "209",
+                "tlsClientAuth": {
+                    "certPresented": "0",
+                    "certVerified": "NONE",
+                    "certRevoked": "0",
+                    "certIssuerDN": "",
+                    "certSubjectDN": "",
+                    "certIssuerDNRFC2253": "",
+                    "certSubjectDNRFC2253": "",
+                    "certIssuerDNLegacy": "",
+                    "certSubjectDNLegacy": "",
+                    "certSerial": "",
+                    "certIssuerSerial": "",
+                    "certSKI": "",
+                    "certIssuerSKI": "",
+                    "certFingerprintSHA1": "",
+                    "certFingerprintSHA256": "",
+                    "certNotBefore": "",
+                    "certNotAfter": "",
+                    "certRFC9440": "",
+                    "certRFC9440TooLarge": false,
+                    "certChainRFC9440": "",
+                    "certChainRFC9440TooLarge": false
+                },
+                "verifiedBotCategory": "",
+                "edgeL4": {
+                    "deliveryRate": 117919
+                }
+            }
+        },
+        "response": {
+            "status": 500
+        }
+    }
+}
+{
+    "wallTime": 0,
+    "cpuTime": 0,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "exception",
+    "scriptVersion": {
+        "id": "06b838f9-cf36-4338-bd93-87db9097e406"
+    },
+    "scriptName": "mailfare",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [
+        {
+            "name": "Error",
+            "message": "Handler does not export a fetch() function.",
+            "timestamp": 1789610820528
+        }
+    ],
+    "logs": [],
+    "eventTimestamp": 1789610820528,
+    "event": {
+        "request": {
+            "url": "https://mailfare.matovufaruq.workers.dev/",
+            "method": "GET",
+            "headers": {
+                "accept": "*/*",
+                "accept-encoding": "gzip, br",
+                "cf-connecting-ip": "102.203.209.115",
+                "cf-ipcountry": "UG",
+                "cf-ray": "a3c48e0c3d6dfeef",
+                "cf-visitor": "{\"scheme\":\"https\"}",
+                "connection": "Keep-Alive",
+                "host": "mailfare.matovufaruq.workers.dev",
+                "user-agent": "curl/8.13.0",
+                "x-forwarded-proto": "https",
+                "x-real-ip": "102.203.209.115"
+            },
+            "cf": {
+                "httpProtocol": "HTTP/1.1",
+                "requestPriority": "",
+                "edgeRequestKeepAliveStatus": 1,
+                "requestHeaderNames": {},
+                "clientTcpRtt": 22,
+                "clientQuicRtt": 0,
+                "colo": "MBA",
+                "asn": 329415,
+                "asOrganization": "Savanna Fibre Limited",
+                "country": "UG",
+                "isEUCountry": false,
+                "city": "Kampala",
+                "continent": "AF",
+                "region": "Central Region",
+                "regionCode": "C",
+                "timezone": "Africa/Kampala",
+                "longitude": "32.58219",
+                "latitude": "0.31628",
+                "tlsVersion": "TLSv1.2",
+                "tlsCipher": "ECDHE-ECDSA-AES128-GCM-SHA256",
+                "tlsClientRandom": "aqtLRJBfCxc0IBbrpgv1+92yNsoIZrOTTExZfyz22rw=",
+                "tlsClientCiphersSha1": "OeQPcEYDgqo1GMKGYd0qWuAiHW8=",
+                "tlsClientExtensionsSha1": "CRkQ5euuu2651vt+v0zfIPfqJ8A=",
+                "tlsClientExtensionsSha1Le": "vN/sLbiiNfOvkFXFDvjB0+A6Jfg=",
+                "tlsExportedAuthenticator": {
+                    "clientHandshake": "470bcb81e97cee3b715d28cafc869610a26abaa657eb979fe165c0405092e39e",
+                    "serverHandshake": "92d0479e0fe215447831a70b3040d673cf4e26817a1cd971d6016b33d51498a3",
+                    "clientFinished": "3be83507f1443b8758ffc97242e1bc11dad9a4b0f869b73be5195d0aa4df34f7",
+                    "serverFinished": "fab7ea08d5f12d36b5f4472a53a45c43a4c7de415fdfd3a51bfa3ef88a008aef"
+                },
+                "tlsClientHelloLength": "209",
+                "tlsClientAuth": {
+                    "certPresented": "0",
+                    "certVerified": "NONE",
+                    "certRevoked": "0",
+                    "certIssuerDN": "",
+                    "certSubjectDN": "",
+                    "certIssuerDNRFC2253": "",
+                    "certSubjectDNRFC2253": "",
+                    "certIssuerDNLegacy": "",
+                    "certSubjectDNLegacy": "",
+                    "certSerial": "",
+                    "certIssuerSerial": "",
+                    "certSKI": "",
+                    "certIssuerSKI": "",
+                    "certFingerprintSHA1": "",
+                    "certFingerprintSHA256": "",
+                    "certNotBefore": "",
+                    "certNotAfter": "",
+                    "certRFC9440": "",
+                    "certRFC9440TooLarge": false,
+                    "certChainRFC9440": "",
+                    "certChainRFC9440TooLarge": false
+                },
+                "verifiedBotCategory": "",
+                "edgeL4": {
+                    "deliveryRate": 163037
+                }
+            }
+        },
+        "response": {
+            "status": 500
+        }
+    }
+}
+{
+    "wallTime": 1,
+    "cpuTime": 0,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "4e36aa75-b998-4451-9ecd-e55a8fa3565b"
+    },
+    "scriptName": "mailfare",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1789611062745,
+    "event": {
+        "request": {
+            "url": "https://mailfare.matovufaruq.workers.dev/",
+            "method": "GET",
+            "headers": {
+                "accept": "*/*",
+                "accept-encoding": "gzip, br",
+                "cf-connecting-ip": "102.203.209.115",
+                "cf-ipcountry": "UG",
+                "cf-ray": "a3c493f619ec65ed",
+                "cf-visitor": "{\"scheme\":\"https\"}",
+                "connection": "Keep-Alive",
+                "host": "mailfare.matovufaruq.workers.dev",
+                "user-agent": "curl/8.13.0",
+                "x-forwarded-proto": "https",
+                "x-real-ip": "102.203.209.115"
+            },
+            "cf": {
+                "httpProtocol": "HTTP/1.1",
+                "requestPriority": "",
+                "edgeRequestKeepAliveStatus": 1,
+                "requestHeaderNames": {},
+                "clientTcpRtt": 45,
+                "clientQuicRtt": 0,
+                "colo": "MBA",
+                "asn": 329415,
+                "asOrganization": "Savanna Fibre Limited",
+                "country": "UG",
+                "isEUCountry": false,
+                "city": "Kampala",
+                "continent": "AF",
+                "region": "Central Region",
+                "regionCode": "C",
+                "timezone": "Africa/Kampala",
+                "longitude": "32.58219",
+                "latitude": "0.31628",
+                "tlsVersion": "TLSv1.2",
+                "tlsCipher": "ECDHE-ECDSA-AES128-GCM-SHA256",
+                "tlsClientRandom": "aqtMNhniGQWXd3p/rugQTNq31IY3slY0jT067DqDbZ0=",
+                "tlsClientCiphersSha1": "OeQPcEYDgqo1GMKGYd0qWuAiHW8=",
+                "tlsClientExtensionsSha1": "CRkQ5euuu2651vt+v0zfIPfqJ8A=",
+                "tlsClientExtensionsSha1Le": "vN/sLbiiNfOvkFXFDvjB0+A6Jfg=",
+                "tlsExportedAuthenticator": {
+                    "clientHandshake": "d8cb2ec77cabb097592e015f3c77e861acf4827c9d4229a6d214f25fe2e4e9bf",
+                    "serverHandshake": "787d3670b7323b749ca5056ce5e251a7a144f3be3a6485e36ed3fcb45dd3678a",
+                    "clientFinished": "3c835f2fdfbd5b86ff8a9e83023d814f37f32353d9afba51e6cd1e20f36ac336",
+                    "serverFinished": "29dfc8e50768ebf470c0e26ce7b9f3971a787e189ef7add310801547a5ef17c5"
+                },
+                "tlsClientHelloLength": "209",
+                "tlsClientAuth": {
+                    "certPresented": "0",
+                    "certVerified": "NONE",
+                    "certRevoked": "0",
+                    "certIssuerDN": "",
+                    "certSubjectDN": "",
+                    "certIssuerDNRFC2253": "",
+                    "certSubjectDNRFC2253": "",
+                    "certIssuerDNLegacy": "",
+                    "certSubjectDNLegacy": "",
+                    "certSerial": "",
+                    "certIssuerSerial": "",
+                    "certSKI": "",
+                    "certIssuerSKI": "",
+                    "certFingerprintSHA1": "",
+                    "certFingerprintSHA256": "",
+                    "certNotBefore": "",
+                    "certNotAfter": "",
+                    "certRFC9440": "",
+                    "certRFC9440TooLarge": false,
+                    "certChainRFC9440": "",
+                    "certChainRFC9440TooLarge": false
+                },
+                "verifiedBotCategory": "",
+                "edgeL4": {
+                    "deliveryRate": 157995
+                }
+            }
+        },
+        "response": {
+            "status": 302
+        }
+    }
+}
+{
+    "wallTime": 0,
+    "cpuTime": 0,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "4e36aa75-b998-4451-9ecd-e55a8fa3565b"
+    },
+    "scriptName": "mailfare",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1789611062987,
+    "event": {
+        "request": {
+            "url": "https://mailfare.matovufaruq.workers.dev/login?next=%2F",
+            "method": "GET",
+            "headers": {
+                "accept": "*/*",
+                "accept-encoding": "gzip, br",
+                "cf-connecting-ip": "102.203.209.115",
+                "cf-ipcountry": "UG",
+                "cf-ray": "a3c493f79e6165e8",
+                "cf-visitor": "{\"scheme\":\"https\"}",
+                "connection": "Keep-Alive",
+                "host": "mailfare.matovufaruq.workers.dev",
+                "user-agent": "curl/8.13.0",
+                "x-forwarded-proto": "https",
+                "x-real-ip": "102.203.209.115"
+            },
+            "cf": {
+                "httpProtocol": "HTTP/1.1",
+                "requestPriority": "",
+                "edgeRequestKeepAliveStatus": 1,
+                "requestHeaderNames": {},
+                "clientTcpRtt": 57,
+                "clientQuicRtt": 0,
+                "colo": "MBA",
+                "asn": 329415,
+                "asOrganization": "Savanna Fibre Limited",
+                "country": "UG",
+                "isEUCountry": false,
+                "city": "Kampala",
+                "continent": "AF",
+                "region": "Central Region",
+                "regionCode": "C",
+                "timezone": "Africa/Kampala",
+                "longitude": "32.58219",
+                "latitude": "0.31628",
+                "tlsVersion": "TLSv1.2",
+                "tlsCipher": "ECDHE-ECDSA-AES128-GCM-SHA256",
+                "tlsClientRandom": "aqtMNyQtjzqj+e9hjgDWo53AKWADw8vyMbXAp19UA3k=",
+                "tlsClientCiphersSha1": "OeQPcEYDgqo1GMKGYd0qWuAiHW8=",
+                "tlsClientExtensionsSha1": "CRkQ5euuu2651vt+v0zfIPfqJ8A=",
+                "tlsClientExtensionsSha1Le": "vN/sLbiiNfOvkFXFDvjB0+A6Jfg=",
+                "tlsExportedAuthenticator": {
+                    "clientHandshake": "1fcd76300996080508a42c3949bf8a6630875221abc56d66217ad28e02ef7997",
+                    "serverHandshake": "74ab0b3d5c4d3484322cdd4adf83a64c20a9cb8b283cd60738918b21baa08d6b",
+                    "clientFinished": "15ce4713ee3457e8b33081c40fca1cf6ac2923ddf7e1144b17258e4b3f347b03",
+                    "serverFinished": "838eed371a92000988c367ca313563ee3e64f19d1f7c6253539b7d03dc294d49"
+                },
+                "tlsClientHelloLength": "209",
+                "tlsClientAuth": {
+                    "certPresented": "0",
+                    "certVerified": "NONE",
+                    "certRevoked": "0",
+                    "certIssuerDN": "",
+                    "certSubjectDN": "",
+                    "certIssuerDNRFC2253": "",
+                    "certSubjectDNRFC2253": "",
+                    "certIssuerDNLegacy": "",
+                    "certSubjectDNLegacy": "",
+                    "certSerial": "",
+                    "certIssuerSerial": "",
+                    "certSKI": "",
+                    "certIssuerSKI": "",
+                    "certFingerprintSHA1": "",
+                    "certFingerprintSHA256": "",
+                    "certNotBefore": "",
+                    "certNotAfter": "",
+                    "certRFC9440": "",
+                    "certRFC9440TooLarge": false,
+                    "certChainRFC9440": "",
+                    "certChainRFC9440TooLarge": false
+                },
+                "verifiedBotCategory": "",
+                "edgeL4": {
+                    "deliveryRate": 129677
+                }
+            }
+        },
+        "response": {
+            "status": 302
+        }
+    }
+}
+{
+    "wallTime": 0,
+    "cpuTime": 0,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "4e36aa75-b998-4451-9ecd-e55a8fa3565b"
+    },
+    "scriptName": "mailfare",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1789611063156,
+    "event": {
+        "request": {
+            "url": "https://mailfare.matovufaruq.workers.dev/",
+            "method": "GET",
+            "headers": {
+                "accept": "*/*",
+                "accept-encoding": "gzip, br",
+                "cf-connecting-ip": "102.203.209.115",
+                "cf-ipcountry": "UG",
+                "cf-ray": "a3c493f8b99465eb",
+                "cf-visitor": "{\"scheme\":\"https\"}",
+                "connection": "Keep-Alive",
+                "host": "mailfare.matovufaruq.workers.dev",
+                "user-agent": "curl/8.13.0",
+                "x-forwarded-proto": "https",
+                "x-real-ip": "102.203.209.115"
+            },
+            "cf": {
+                "httpProtocol": "HTTP/1.1",
+                "requestPriority": "",
+                "edgeRequestKeepAliveStatus": 1,
+                "requestHeaderNames": {},
+                "clientTcpRtt": 48,
+                "clientQuicRtt": 0,
+                "colo": "MBA",
+                "asn": 329415,
+                "asOrganization": "Savanna Fibre Limited",
+                "country": "UG",
+                "isEUCountry": false,
+                "city": "Kampala",
+                "continent": "AF",
+                "region": "Central Region",
+                "regionCode": "C",
+                "timezone": "Africa/Kampala",
+                "longitude": "32.58219",
+                "latitude": "0.31628",
+                "tlsVersion": "TLSv1.2",
+                "tlsCipher": "ECDHE-ECDSA-AES128-GCM-SHA256",
+                "tlsClientRandom": "aqtMN+RhmOEyaxMPt0kqVEvFn2FHbaffeouVmt4fx2I=",
+                "tlsClientCiphersSha1": "OeQPcEYDgqo1GMKGYd0qWuAiHW8=",
+                "tlsClientExtensionsSha1": "CRkQ5euuu2651vt+v0zfIPfqJ8A=",
+                "tlsClientExtensionsSha1Le": "vN/sLbiiNfOvkFXFDvjB0+A6Jfg=",
+                "tlsExportedAuthenticator": {
+                    "clientHandshake": "a839bc0aad520134104c64ccd26a1bc404fe951c5fc994caeb3300f14fa32df3",
+                    "serverHandshake": "4248c54b7a45bf740b65d3db4e92c8bcd385400ee07b6c34ecfc792f5e15acdd",
+                    "clientFinished": "be31f32f2ea08f8121972687b6bc7ead5ca4d7a689027c24e5281348ce48d6df",
+                    "serverFinished": "1cf70e95bcd08a93ce320d7da3d823289e1dad6fd2e7b797c8b125de251f87fa"
+                },
+                "tlsClientHelloLength": "209",
+                "tlsClientAuth": {
+                    "certPresented": "0",
+                    "certVerified": "NONE",
+                    "certRevoked": "0",
+                    "certIssuerDN": "",
+                    "certSubjectDN": "",
+                    "certIssuerDNRFC2253": "",
+                    "certSubjectDNRFC2253": "",
+                    "certIssuerDNLegacy": "",
+                    "certSubjectDNLegacy": "",
+                    "certSerial": "",
+                    "certIssuerSerial": "",
+                    "certSKI": "",
+                    "certIssuerSKI": "",
+                    "certFingerprintSHA1": "",
+                    "certFingerprintSHA256": "",
+                    "certNotBefore": "",
+                    "certNotAfter": "",
+                    "certRFC9440": "",
+                    "certRFC9440TooLarge": false,
+                    "certChainRFC9440": "",
+                    "certChainRFC9440TooLarge": false
+                },
+                "verifiedBotCategory": "",
+                "edgeL4": {
+                    "deliveryRate": 152041
+                }
+            }
+        },
+        "response": {
+            "status": 302
+        }
+    }
+}
+{
+    "wallTime": 0,
+    "cpuTime": 0,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "4e36aa75-b998-4451-9ecd-e55a8fa3565b"
+    },
+    "scriptName": "mailfare",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1789611096988,
+    "event": {
+        "request": {
+            "url": "https://mailfare.matovufaruq.workers.dev/",
+            "method": "GET",
+            "headers": {
+                "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+                "accept-encoding": "gzip, br",
+                "accept-language": "en-GB,en-US;q=0.9,en;q=0.8,hy;q=0.7",
+                "cache-control": "max-age=0",
+                "cf-connecting-ip": "102.203.209.115",
+                "cf-ipcountry": "UG",
+                "cf-ray": "a3c494cc2fa465e9",
+                "cf-visitor": "{\"scheme\":\"https\"}",
+                "connection": "Keep-Alive",
+                "cookie": "REDACTED",
+                "dnt": "1",
+                "host": "mailfare.matovufaruq.workers.dev",
+                "priority": "u=0, i",
+                "sec-ch-ua": "\"Chromium\";v=\"152\", \"Not?A_Brand\";v=\"24\", \"Google Chrome\";v=\"152\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-ch-ua-platform": "\"Windows\"",
+                "sec-fetch-dest": "document",
+                "sec-fetch-mode": "navigate",
+                "sec-fetch-site": "cross-site",
+                "sec-fetch-user": "?1",
+                "upgrade-insecure-requests": "1",
+                "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+                "x-forwarded-proto": "https",
+                "x-real-ip": "102.203.209.115"
+            },
+            "cf": {
+                "httpProtocol": "HTTP/3",
+                "clientAcceptEncoding": "gzip, deflate, br",
+                "requestPriority": "",
+                "edgeRequestKeepAliveStatus": 1,
+                "requestHeaderNames": {},
+                "clientTcpRtt": 0,
+                "clientQuicRtt": 19,
+                "colo": "MBA",
+                "asn": 329415,
+                "asOrganization": "Savanna Fibre Limited",
+                "country": "UG",
+                "isEUCountry": false,
+                "city": "Kampala",
+                "continent": "AF",
+                "region": "Central Region",
+                "regionCode": "C",
+                "timezone": "Africa/Kampala",
+                "longitude": "32.58219",
+                "latitude": "0.31628",
+                "tlsVersion": "TLSv1.3",
+                "tlsCipher": "AEAD-AES128-GCM-SHA256",
+                "tlsClientRandom": "ksNF4NfbN/zt/cqIrrQCtHKQsxRD5/nKwlW7LRkOdcQ=",
+                "tlsClientCiphersSha1": "3HTt3+R/6BL3zeALJDSq0pR1yOQ=",
+                "tlsClientExtensionsSha1": "5xoPhAEB6qatDvropZ58Uzvdyzc=",
+                "tlsClientExtensionsSha1Le": "wpOfGlnlzVOM7gpjdcCAabAsm7k=",
+                "tlsClientHelloLength": "1937",
+                "tlsClientAuth": {
+                    "certPresented": "0",
+                    "certVerified": "NONE",
+                    "certRevoked": "0",
+                    "certIssuerDN": "",
+                    "certSubjectDN": "",
+                    "certIssuerDNRFC2253": "",
+                    "certSubjectDNRFC2253": "",
+                    "certIssuerDNLegacy": "",
+                    "certSubjectDNLegacy": "",
+                    "certSerial": "",
+                    "certIssuerSerial": "",
+                    "certSKI": "",
+                    "certIssuerSKI": "",
+                    "certFingerprintSHA1": "",
+                    "certFingerprintSHA256": "",
+                    "certNotBefore": "",
+                    "certNotAfter": "",
+                    "certRFC9440": "",
+                    "certRFC9440TooLarge": false,
+                    "certChainRFC9440": "",
+                    "certChainRFC9440TooLarge": false
+                },
+                "verifiedBotCategory": "",
+                "edgeL4": {
+                    "deliveryRate": 74960
+                }
+            }
+        },
+        "response": {
+            "status": 302
+        }
+    }
+}

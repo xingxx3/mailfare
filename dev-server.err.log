@@ -16,3 +16,56 @@ See more: https://nextjs.org/docs/app/guides/local-development
 
 
 A DurableObjectNamespace in the config referenced the class "RealtimeHub", but no such Durable Object class is exported from the worker. Please make sure the class name matches, it is exported, and the class extends 'DurableObject'. Attempts to call to this Durable Object class will fail at runtime, but historically this was not a startup-time error. Future versions of workerd may make this a startup-time error.
+[browser] ⨯ unhandledRejection: TypeError: Failed to fetch
+TypeError: Failed to fetch
+[browser] ⨯ unhandledRejection: TypeError: Failed to fetch
+TypeError: Failed to fetch
+[browser] ⨯ unhandledRejection: TypeError: Failed to fetch
+TypeError: Failed to fetch
+[browser] ⨯ unhandledRejection: TypeError: Failed to fetch
+TypeError: Failed to fetch
+Debugger listening on ws://127.0.0.1:9229/e6db5b89-0765-4fee-adc7-fe438515ca86
+For help, see: https://nodejs.org/learn/getting-started/debugging
+[browser] ⨯ unhandledRejection: TypeError: Failed to fetch
+    at authFetch (src/lib/auth/client.ts:48:25)
+    at <unknown> (src/hooks/utils.ts:112:30)
+    at fetchMessageCounts (src/hooks/utils.ts:123:3)
+    at loadCounts (src/hooks/use-message-counts.ts:35:48)
+    at useMessageCounts.useEffect.refreshInterval (src/hooks/use-message-counts.ts:64:57)
+  46 | export async function authFetch(input: RequestInfo | URL, init: AuthFetchOptions = {}): Promise<Response> {
+  47 | 	const { redirectOnUnauthorized = true, headers, ...requestInit } = init;
+> 48 | 	const response = await fetch(input, {
+     |                        ^
+  49 | 		...requestInit,
+  50 | 		headers: getAuthHeaders(headers),
+  51 | 	});
+[browser] ⨯ unhandledRejection: TypeError: Failed to fetch
+    at authFetch (src/lib/auth/client.ts:48:25)
+    at fetchMessageList (src/hooks/utils.ts:139:27)
+    at loadMessages (src/hooks/use-messages.ts:33:40)
+    at useMessages.useEffect.refreshInterval (src/hooks/use-messages.ts:52:57)
+  46 | export async function authFetch(input: RequestInfo | URL, init: AuthFetchOptions = {}): Promise<Response> {
+  47 | 	const { redirectOnUnauthorized = true, headers, ...requestInit } = init;
+> 48 | 	const response = await fetch(input, {
+     |                        ^
+  49 | 		...requestInit,
+  50 | 		headers: getAuthHeaders(headers),
+  51 | 	});
+[browser] ⨯ unhandledRejection: TypeError: Failed to fetch
+TypeError: Failed to fetch
+[browser] ⨯ unhandledRejection: TypeError: Failed to fetch
+TypeError: Failed to fetch
+[browser] ⨯ unhandledRejection: TypeError: Failed to fetch
+TypeError: Failed to fetch
+[browser] ⨯ unhandledRejection: TypeError: Failed to fetch
+TypeError: Failed to fetch
+[browser] ⨯ unhandledRejection: TypeError: Failed to fetch
+TypeError: Failed to fetch
+[browser] ⨯ unhandledRejection: TypeError: Failed to fetch
+TypeError: Failed to fetch
+[browser] ⨯ unhandledRejection: TypeError: Failed to fetch
+TypeError: Failed to fetch
+[browser] ⨯ unhandledRejection: TypeError: Failed to fetch
+TypeError: Failed to fetch
+[browser] ⨯ unhandledRejection: TypeError: Failed to fetch
+TypeError: Failed to fetch

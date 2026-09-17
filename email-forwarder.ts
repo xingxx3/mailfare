@@ -60,6 +60,22 @@ export default {
 			);
 		}
 	},
+// HTTP requests to the workers.dev URL (e.g. mailfare.<subdomain>.workers.dev)
+// would otherwise trigger Cloudflare error 1101, because this Worker has no
+// fetch() handler. The self-hosted app lives behind the Cloudflare Tunnel at
+// FORWARD_URL, so politely send browser traffic there instead. Path and query
+// are preserved (it's the same app on both sides of the tunnel).
+async fetch(request: Request, env: ForwarderEnv): Promise<Response> {
+	const forwarderBase = (env.FORWARD_URL || "").replace(/\/+$/, "");
+	if (!forwarderBase) {
+		return new Response("Self-hosted Mailflare is not configured (missing FORWARD_URL).", {
+			status: 503,
+			headers: { "Content-Type": "text/plain; charset=utf-8" },
+		});
+	}
+	const incoming = new URL(request.url);
+	return Response.redirect(`${forwarderBase}${incoming.pathname}${incoming.search}`, 302);
+},
 async queue(batch: MessageBatch): Promise<void> {
 		// No-op: the previous `mailfare` script consumed the app queues. In the
 		// self-hosted ($0) deployment all processing happens in the locally-hosted

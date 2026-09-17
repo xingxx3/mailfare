@@ -25,7 +25,7 @@
 		"bindings": [
 			{
 				"name": "REALTIME",
-				"class_name": "RealtimeHub",
+				"class_name": "MailflareRealtimeHub",
 			},
 		],
 	},
@@ -36,15 +36,35 @@
 				"RealtimeHub",
 			],
 		},
+		// The published script still has live Durable Object instances that
+		// depend on the `RealtimeHub` class (error 10064), so the class must
+		// be renamed rather than re-created — a rename migrates existing
+		// instances to the new class name.
+		{
+			"tag": "v3-readd-realtime",
+			"renamed_classes": [
+				{
+					"from": "RealtimeHub",
+					"to": "MailflareRealtimeHub",
+				},
+			],
+		},
 	],
 	"workflows": [
 		{
 			"name": "mailflare-database-backup",
 			"binding": "DATABASE_BACKUP_WORKFLOW",
 			"class_name": "DatabaseBackupWorkflow",
-			"schedules": ["0 2 * * *"],
+			// NOTE: `schedules` on Workflows require a paid Workers plan. The
+			// daily 02:00 UTC run is handled by the free cron trigger below,
+			// which starts the workflow via the `scheduled()` handler.
 		},
 	],
+	"triggers": {
+		"crons": [
+			"0 2 * * *",
+		],
+	},
 	"ratelimits": [
 		{
 			"name": "LOGIN_RATE_LIMIT",

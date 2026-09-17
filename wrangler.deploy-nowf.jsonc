@@ -24,7 +24,7 @@
 		"bindings": [
 			{
 				"name": "REALTIME",
-				"class_name": "RealtimeHub"
+				"class_name": "MailflareRealtimeHub"
 			}
 		]
 	},

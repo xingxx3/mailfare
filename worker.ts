@@ -15,7 +15,7 @@ import {
 	getAccountForwardingDestination,
 	MAILFLARE_FORWARDED_HEADER,
 } from "./src/lib/email/account-forwarding";
-export { RealtimeHub } from "./src/lib/realtime/hub";
+export { MailflareRealtimeHub } from "./src/lib/realtime/hub";
 export { DatabaseBackupWorkflow } from "./src/lib/backups/workflow";
 
 export default {
@@ -69,6 +69,13 @@ export default {
 			console.error("Inbound enqueue failed", err);
 			message.setReject("Processing failed");
 		}
+	},
+
+	async scheduled(_controller: ScheduledController, env: CloudflareEnv, _ctx: ExecutionContext) {
+		// Free-plan replacement for scheduled Workflows: the 02:00 UTC cron
+		// trigger starts the backup workflow, which decides via
+		// `createScheduledBackupIfDue` whether a backup actually runs.
+		await env.DATABASE_BACKUP_WORKFLOW.create();
 	},
 
 	async queue(batch: MessageBatch, env: CloudflareEnv): Promise<void> {

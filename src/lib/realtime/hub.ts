@@ -1,7 +1,11 @@
 import { DurableObject } from "cloudflare:workers";
 import type { NewMessageNotification } from "./types";
 
-export class RealtimeHub extends DurableObject<CloudflareEnv> {
+// Renamed from `RealtimeHub`: the published script's DO migration history
+// recorded this class as deleted (v2-drop-realtime from the email-forwarder
+// deploys), and DO migrations are append-only — so the class must be
+// re-registered under a fresh name (see wrangler.jsonc v3 migration).
+export class MailflareRealtimeHub extends DurableObject<CloudflareEnv> {
 	async fetch(request: Request): Promise<Response> {
 		const url = new URL(request.url);
 
